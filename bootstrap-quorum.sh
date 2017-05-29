@@ -3,7 +3,7 @@
 set -eu -o pipefail
 
 # install build deps
-add-apt-repository ppa:ethereum/ethereum
+add-apt-repository ppa:ethereum/ethereum -y
 apt-get update
 apt-get install -y build-essential unzip libdb-dev libsodium-dev zlib1g-dev libtinfo-dev solc sysvbanner wrk
 
@@ -32,7 +32,15 @@ cp build/bin/geth /usr/local/bin
 cp build/bin/bootnode /usr/local/bin
 popd >/dev/null
 
+mv quorum ../
+
+cp -r 3nodes ../
+
 # done!
 banner "Quorum"
 
+cd ../3nodes
+./raft-init.sh
+./raft-start.sh
+cd -
 
