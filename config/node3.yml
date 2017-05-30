@@ -7,4 +7,4 @@ nodeEndpoint: http://localhost:22002
 
 # The Ethereum or Quorum address we wish to use when transacting.
 # Note - this address must be already unlocked in the client
-fromAddress: "0fbdc686b912d7722dc86510934589e0aaf3b55a"
+fromAddress: "0x0fbdc686b912d7722dc86510934589e0aaf3b55a"

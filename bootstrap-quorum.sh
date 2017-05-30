@@ -34,7 +34,7 @@ popd >/dev/null
 
 mv quorum ../
 
-cp -r 3nodes ../
+cp -r 3nodes-quorum ../
 
 # done!
 banner "Quorum"
