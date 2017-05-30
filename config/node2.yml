@@ -1,0 +1,10 @@
+server:
+  port: 8081
+
+# Endpoint of an Ethereum or Quorum node we wish to use.
+# To use IPC simply provide a file path to the socket, such as /path/to/geth.ipc
+nodeEndpoint: http://localhost:22001
+
+# The Ethereum or Quorum address we wish to use when transacting.
+# Note - this address must be already unlocked in the client
+fromAddress: "ca843569e3427144cead5e4d5999a3d0ccf92b8e"

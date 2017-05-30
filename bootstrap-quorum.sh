@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -eu -o pipefail
+set -euf -o pipefail
 
 # install build deps
 add-apt-repository ppa:ethereum/ethereum -y
@@ -39,8 +39,5 @@ cp -r 3nodes ../
 # done!
 banner "Quorum"
 
-cd ../3nodes
-./raft-init.sh
-./raft-start.sh
-cd -
+chown -R ubuntu:ubuntu /home/ubuntu/
 
