@@ -23,8 +23,8 @@ echo "[*] Starting node 3"
 PRIVATE_CONFIG=tm3.conf nohup geth --datadir qdata/dd3 $GLOBAL_ARGS --rpcport 22002 --port 21002 --unlock 0 --password passwords.txt 2>>qdata/logs/3.log &
 
 echo "[*] Waiting for nodes to start"
-sleep 20
+sleep 15
 echo "[*] Sending test transaction against each node"
 for i in 1 2 3; do
-  PRIVATE_CONFIG="tm${i}.conf" geth --exec 'loadScript("script1.js")' attach "ipc:qdata/dd${i}/geth.ipc"
+  PRIVATE_CONFIG="tm${i}.conf" geth --exec 'loadScript("script'"${i}"'.js")' attach "ipc:qdata/dd${i}/geth.ipc"
 done

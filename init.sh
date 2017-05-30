@@ -15,13 +15,12 @@ mkdir -p ../3nodes-service/lib
 cp build/libs/erc20-rest-service-0.1.0.jar ../3nodes-service/lib
 cd ../3nodes-service
 cp ../erc20-quorum-vm-example/service-start.sh .
+cp ../erc20-quorum-vm-example/service-stop.sh .
 
 for i in 1 2 3; do
   mkdir -p "service${i}"
   cp "../erc20-quorum-vm-example/config/node${i}.yml" "service${i}/application.yml"
 done
-
-cd -
 
 ./service-start.sh
 
