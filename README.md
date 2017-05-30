@@ -19,7 +19,7 @@ Full transaction privacy is supported.
 
 This will configure and start both the Quorum network and the ERC-20 services.
 
-``bash
+```bash
 cd ~/erc20-quorum-vm-example
 ./init.sh
 ```
@@ -73,7 +73,7 @@ attributes.
 
 ## Azure VM
 
-An Azure VM is available at **insert link here** with this environment 
+An Azure VM is available at **<insert link here>** with this environment 
 pre-configured.
 
 It is recommended that you use this to run this example.
