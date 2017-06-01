@@ -3,6 +3,7 @@
 set -euf -o pipefail
 
 cd ../3nodes-quorum
+./stop.sh  # just in case it's being re-run
 ./raft-init.sh
 ./raft-start.sh
 cd -
@@ -22,5 +23,6 @@ for i in 1 2 3; do
   cp "../erc20-quorum-vm-example/config/node${i}.yml" "cs${i}/application.yml"
 done
 
+./service-stop.sh  # just in case it's being re-run
 ./service-start.sh
 
