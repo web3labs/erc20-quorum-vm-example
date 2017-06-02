@@ -27,6 +27,7 @@ cd ~/erc20-quorum-vm-example
 Alternatively, if you have an fresh Ubuntu host (username must be *ubuntu*):
 
 ```bash
+cd $HOME
 git clone https://github.com/blk-io/erc20-quorum-vm-example.git
 cd erc20-quorum-vm-example
 sudo ./bootstrap.sh
