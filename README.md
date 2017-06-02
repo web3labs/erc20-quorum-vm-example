@@ -17,10 +17,19 @@ Full transaction privacy is supported.
 
 ## Usage
 
-This will configure and start both the Quorum network and the ERC-20 services.
+If you're using the [Azure VM Image](), this will configure and start both the Quorum network and the ERC-20 services:
 
 ```bash
 cd ~/erc20-quorum-vm-example
+./init.sh
+```
+
+Alternatively, if you have an fresh Ubuntu host (username must be *ubuntu*):
+
+```bash
+git clone https://github.com/blk-io/erc20-quorum-vm-example.git
+cd erc20-quorum-vm-example
+sudo ./bootstrap.sh
 ./init.sh
 ```
 
@@ -134,4 +143,20 @@ git clone https://github.com/blk-io/erc20-quorum-vm-example.git
 cd erc20-quorum-vm-example
 sudo ./bootstrap.sh
 ```
+
+## Troubleshooting
+
+I get the following message after running *init.sh*:
+
+```bash
+[*] Starting Constellation nodes
+[*] Starting node 1
+[*] Starting node 2
+[*] Starting node 3
+[*] Waiting for nodes to start
+[*] Sending test transaction against each node
+Fatal: Unable to attach to remote geth: dial unix qdata/dd1/geth.ipc: connect: no such file or directory
+```
+
+Occasionally startup fails, please try re-running *init.sh*.
 
